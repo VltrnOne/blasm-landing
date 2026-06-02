@@ -17,8 +17,8 @@ export default function Home() {
             <a href="#approach" className="hover:text-[var(--foreground)] transition-colors">
               Approach
             </a>
-            <a href="#leadership" className="hover:text-[var(--foreground)] transition-colors">
-              Leadership
+            <a href="/privacy" className="hover:text-[var(--foreground)] transition-colors">
+              Privacy
             </a>
             <a
               href="#contact"
@@ -404,65 +404,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── LEADERSHIP ─── */}
-      <section id="leadership" className="py-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-sm font-medium text-[var(--gold)] tracking-widest uppercase mb-3">
-            Leadership
-          </p>
-          <h2 className="text-3xl md:text-4xl font-semibold text-[var(--accent)] mb-4">
-            Operators, Not Observers
-          </h2>
-          <p className="text-[var(--slate)] max-w-2xl mb-16">
-            Our leadership team has built and scaled companies. We bring
-            executive-level judgment to every engagement because we&apos;ve sat in
-            the chair.
-          </p>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-[var(--accent)] flex items-center justify-center">
-                <span className="text-2xl font-semibold text-[var(--gold)]">JM</span>
-              </div>
-              <h3 className="text-lg font-semibold text-[var(--accent)]">
-                Jay Morpheous
-              </h3>
-              <p className="text-sm text-[var(--gold)] mb-2">Founder &amp; CEO</p>
-              <p className="text-sm text-[var(--slate)] leading-relaxed">
-                Serial operator with deep expertise in fintech infrastructure,
-                agentic systems, and operational scaling. Leads firm strategy and
-                key client relationships.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-[var(--accent)] flex items-center justify-center">
-                <span className="text-2xl font-semibold text-[var(--gold)]">VP</span>
-              </div>
-              <h3 className="text-lg font-semibold text-[var(--accent)]">
-                VP, Operations
-              </h3>
-              <p className="text-sm text-[var(--gold)] mb-2">Coming Soon</p>
-              <p className="text-sm text-[var(--slate)] leading-relaxed">
-                We&apos;re building our executive team to match our growth ambitions.
-                Key leadership hires are part of our scaling strategy.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-[var(--accent)] flex items-center justify-center">
-                <span className="text-2xl font-semibold text-[var(--gold)]">VP</span>
-              </div>
-              <h3 className="text-lg font-semibold text-[var(--accent)]">
-                VP, Technology
-              </h3>
-              <p className="text-sm text-[var(--gold)] mb-2">Coming Soon</p>
-              <p className="text-sm text-[var(--slate)] leading-relaxed">
-                Our agentic solutions practice requires world-class technical
-                leadership. Active search in progress.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ─── CTA / CONTACT ─── */}
       <section id="contact" className="py-24 px-6 bg-[var(--accent)]">
         <div className="max-w-3xl mx-auto text-center">
@@ -475,13 +416,13 @@ export default function Home() {
           </p>
           <div className="grid sm:grid-cols-2 gap-4 max-w-md mx-auto mb-12">
             <a
-              href="mailto:jay@blasm.us"
+              href="mailto:info@blasm.us"
               className="px-6 py-3.5 bg-[var(--gold)] text-[var(--accent)] rounded-md text-sm font-semibold hover:bg-[var(--gold-light)] transition-colors"
             >
               Email Us
             </a>
             <a
-              href="mailto:jay@blasm.us?subject=Investment%20Inquiry"
+              href="mailto:info@blasm.us?subject=Investment%20Inquiry"
               className="px-6 py-3.5 border border-gray-600 text-white rounded-md text-sm font-medium hover:border-[var(--gold)] transition-colors"
             >
               Investor Relations
@@ -492,8 +433,8 @@ export default function Home() {
               <strong className="text-gray-400">BLASM Consulting</strong>
               <br />
               United States &middot;{" "}
-              <a href="mailto:jay@blasm.us" className="text-gray-400 hover:text-white">
-                jay@blasm.us
+              <a href="mailto:info@blasm.us" className="text-gray-400 hover:text-white">
+                info@blasm.us
               </a>
             </p>
           </div>
@@ -507,10 +448,10 @@ export default function Home() {
             &copy; 2026 BLASM Consulting. All rights reserved.
           </div>
           <div className="flex items-center gap-6 text-xs text-gray-500">
-            <a href="#" className="hover:text-gray-300 transition-colors">
+            <a href="/privacy" className="hover:text-gray-300 transition-colors">
               Privacy
             </a>
-            <a href="#" className="hover:text-gray-300 transition-colors">
+            <a href="/terms" className="hover:text-gray-300 transition-colors">
               Terms
             </a>
             <span>blasm.us</span>
