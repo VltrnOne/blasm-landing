@@ -1,110 +1,57 @@
 export default function Terms() {
   return (
-    <>
-      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-[var(--bg)]/80 border-b border-[var(--border)]">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <a href="/" className="text-lg font-semibold tracking-tight text-[var(--text-primary)]">
-            BLASM<span className="text-[var(--accent)]">.</span>
-          </a>
-          <div className="hidden md:flex items-center gap-8 text-[13px] text-[var(--text-secondary)]">
-            <a href="/#services" className="hover:text-[var(--text-primary)] transition-colors">Services</a>
-            <a href="/privacy" className="hover:text-[var(--text-primary)] transition-colors">Privacy</a>
-            <a href="/#contact" className="btn-primary !py-2 !px-5 !text-[13px]">Get in Touch</a>
+    <div style={{ background: "var(--paper)", minHeight: "100vh" }}>
+      <nav style={{ borderBottom: "1px solid var(--rule)", padding: "0 0" }}>
+        <div className="page-grid" style={{ alignItems: "center", height: 64 }}>
+          <div style={{ gridColumn: "content-start / content-end", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+            <a href="/" className="display" style={{ fontSize: "1.3rem", letterSpacing: "-0.02em", lineHeight: 1, textDecoration: "none", color: "var(--ink)" }}>BLASM</a>
+            <div style={{ display: "flex", gap: 24, alignItems: "center" }}>
+              <a href="/privacy" className="label" style={{ color: "var(--ink-secondary)", textDecoration: "none" }}>Privacy</a>
+              <a href="/#contact" className="cta cta--fill" style={{ padding: "8px 20px", fontSize: "0.65rem" }}>Contact</a>
+            </div>
           </div>
         </div>
       </nav>
 
-      <main className="pt-28 pb-20 px-6">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-xs font-medium text-[var(--accent)] tracking-[0.2em] uppercase mb-3">Legal</p>
-          <h1 className="text-3xl md:text-4xl font-semibold text-[var(--text-primary)] mb-2">Terms of Service</h1>
-          <p className="text-sm text-[var(--text-muted)] mb-12">Last updated: June 2, 2026</p>
+      <main style={{ paddingTop: "clamp(48px, 8vw, 120px)", paddingBottom: "clamp(64px, 10vw, 120px)" }}>
+        <div className="page-grid">
+          <div className="col-8">
+            <span className="label label--accent" style={{ display: "block", marginBottom: 16 }}>Legal</span>
+            <h1 className="display display--md" style={{ marginBottom: 8 }}>Terms of Service</h1>
+            <p style={{ fontSize: "0.85rem", color: "var(--ink-muted)", marginBottom: "clamp(40px, 5vw, 64px)" }}>Last updated June 2, 2026</p>
 
-          <div className="space-y-10 text-[var(--text-secondary)] text-sm leading-relaxed">
-            <section>
-              <h2 className="text-base font-semibold text-[var(--text-primary)] mb-3">1. Agreement to Terms</h2>
-              <p>
-                By accessing or using the BLASM Consulting website (&quot;blasm.us&quot;), you agree
-                to be bound by these Terms of Service. If you do not agree, please do not use our
-                website or services.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-base font-semibold text-[var(--text-primary)] mb-3">2. Services</h2>
-              <p>
-                BLASM Consulting provides strategic consulting services including logistics
-                optimization, research and development, agentic AI solutions, digital
-                transformation, and strategic advisory. All consulting engagements are governed
-                by separate engagement agreements.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-base font-semibold text-[var(--text-primary)] mb-3">3. Intellectual Property</h2>
-              <p>
-                All content on this website — including text, graphics, logos, design elements,
-                and software — is the property of BLASM Consulting and is protected by applicable
-                intellectual property laws. You may not reproduce, distribute, or create derivative
-                works without our prior written consent.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-base font-semibold text-[var(--text-primary)] mb-3">4. Confidentiality</h2>
-              <p>
-                Any information shared during consulting engagements is treated as confidential
-                unless otherwise agreed. Both parties agree to protect confidential information
-                with the same degree of care used to protect their own proprietary information.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-base font-semibold text-[var(--text-primary)] mb-3">5. Limitation of Liability</h2>
-              <p>
-                BLASM Consulting provides information and services on an &quot;as is&quot; basis.
-                We make no warranties regarding accuracy, completeness, or reliability. In no event
-                shall BLASM Consulting be liable for any indirect, incidental, special, or
-                consequential damages.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-base font-semibold text-[var(--text-primary)] mb-3">6. Governing Law</h2>
-              <p>
-                These Terms are governed by the laws of the United States. Any disputes shall
-                be resolved in courts of competent jurisdiction.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-base font-semibold text-[var(--text-primary)] mb-3">7. Modifications</h2>
-              <p>
-                We reserve the right to modify these terms at any time. Changes are effective
-                immediately upon posting. Continued use constitutes acceptance.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-base font-semibold text-[var(--text-primary)] mb-3">8. Contact</h2>
-              <p>
-                Questions about these Terms? Reach us at{" "}
-                <a href="mailto:info@blasm.us" className="text-[var(--accent)] hover:underline">info@blasm.us</a>
-              </p>
-            </section>
+            <div style={{ display: "flex", flexDirection: "column", gap: 40 }}>
+              {[
+                { t: "Agreement", p: "By accessing blasm.us, you agree to be bound by these Terms of Service. If you do not agree, do not use our website or services." },
+                { t: "Services", p: "BLASM Consulting provides strategic consulting in logistics optimization, research and development, agentic AI solutions, digital transformation, and strategic advisory. Engagements are governed by separate agreements." },
+                { t: "Intellectual Property", p: "All content on this website — text, graphics, logos, design, software — is the property of BLASM Consulting and protected by applicable intellectual property laws. No reproduction without prior written consent." },
+                { t: "Confidentiality", p: "Information shared during consulting engagements is treated as confidential unless otherwise agreed. Both parties protect confidential information with the same care used for their own proprietary information." },
+                { t: "Limitation of Liability", p: "BLASM provides information and services as-is. We make no warranties regarding accuracy, completeness, or reliability. BLASM shall not be liable for indirect, incidental, special, or consequential damages." },
+                { t: "Governing Law", p: "These Terms are governed by the laws of the United States. Disputes shall be resolved in courts of competent jurisdiction." },
+                { t: "Modifications", p: "We reserve the right to modify these terms at any time. Changes are effective immediately upon posting. Continued use constitutes acceptance." },
+                { t: "Contact", p: "Questions about these Terms — reach us at info@blasm.us." },
+              ].map((s, i) => (
+                <div key={s.t} style={{ borderTop: i === 0 ? "3px solid var(--ink)" : "1px solid var(--rule)", paddingTop: 20 }}>
+                  <h2 style={{ fontSize: "1rem", fontWeight: 600, color: "var(--ink)", marginBottom: 8 }}>{s.t}</h2>
+                  <p style={{ color: "var(--ink-secondary)", lineHeight: 1.7, maxWidth: "60ch" }}>{s.p}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </main>
 
-      <footer className="border-t border-[var(--border)] py-10 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-          <span className="text-xs text-[var(--text-muted)]">&copy; 2026 BLASM Consulting. All rights reserved.</span>
-          <div className="flex items-center gap-6 text-xs text-[var(--text-muted)]">
-            <a href="/privacy" className="hover:text-[var(--text-secondary)] transition-colors">Privacy</a>
-            <a href="/terms" className="hover:text-[var(--text-secondary)] transition-colors">Terms</a>
+      <footer style={{ background: "var(--ink)", padding: "clamp(24px, 3vw, 40px) 0" }}>
+        <div className="page-grid">
+          <div style={{ gridColumn: "content-start / content-end", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
+            <span style={{ fontSize: "0.7rem", color: "oklch(0.55 0.008 75)" }}>&copy; 2026 BLASM Consulting</span>
+            <div style={{ display: "flex", gap: 24 }}>
+              <a href="/privacy" style={{ fontSize: "0.7rem", color: "oklch(0.55 0.008 75)", textDecoration: "none" }}>Privacy</a>
+              <a href="/terms" style={{ fontSize: "0.7rem", color: "oklch(0.55 0.008 75)", textDecoration: "none" }}>Terms</a>
+            </div>
           </div>
         </div>
       </footer>
-    </>
+    </div>
   );
 }

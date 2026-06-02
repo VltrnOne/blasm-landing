@@ -1,38 +1,30 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Bricolage_Grotesque, Figtree } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-bricolage",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const figtree = Figtree({
+  variable: "--font-figtree",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "BLASM — Strategic Consulting for Complex Operations",
+  title: "BLASM — Logistics, R&D, Agentic Solutions",
   description:
-    "BLASM is a consulting agency specializing in Logistics, Research & Development, and Agentic Solutions. Three years of delivering measurable outcomes for enterprises navigating operational complexity.",
-  keywords: [
-    "consulting",
-    "logistics consulting",
-    "R&D consulting",
-    "agentic solutions",
-    "AI consulting",
-    "operational excellence",
-    "BLASM",
-  ],
+    "BLASM is a consulting agency delivering measurable outcomes in logistics, research & development, and agentic AI solutions. Three years of cross-domain execution.",
   openGraph: {
-    title: "BLASM — Strategic Consulting for Complex Operations",
+    title: "BLASM — Logistics, R&D, Agentic Solutions",
     description:
-      "Logistics. R&D. Agentic Solutions. Three years of delivering measurable outcomes.",
+      "Cross-domain consulting. Logistics. R&D. Agentic AI. Three years of measurable outcomes.",
     url: "https://blasm.us",
     siteName: "BLASM",
     type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "BLASM — Strategic Consulting for Complex Operations",
-    description:
-      "Logistics. R&D. Agentic Solutions. Three years of delivering measurable outcomes.",
   },
   robots: "index, follow",
 };
@@ -43,10 +35,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} h-full`}>
-      <body className="noise min-h-full font-[family-name:var(--font-geist-sans)]">
-        {children}
-      </body>
+    <html lang="en" className={`${bricolage.variable} ${figtree.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }
