@@ -9,7 +9,7 @@ import { useEffect, useRef, useState } from "react";
    Content splits: 61.8% / 38.2%
    ═══════════════════════════════════════════ */
 
-const FRAME_COUNT = 108;
+const FRAME_COUNT = 102;
 const fp = (i: number) => `/frames/f${String(i).padStart(3, "0")}.jpg`;
 
 /* ── Canvas-based smooth frame renderer — tracks FULL page scroll ── */
