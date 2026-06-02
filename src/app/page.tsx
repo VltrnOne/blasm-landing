@@ -9,7 +9,7 @@ import { useEffect, useRef, useState } from "react";
    Content splits: 61.8% / 38.2%
    ═══════════════════════════════════════════ */
 
-const FRAME_COUNT = 54;
+const FRAME_COUNT = 108;
 const fp = (i: number) => `/frames/f${String(i).padStart(3, "0")}.jpg`;
 
 /* ── Canvas-based smooth frame renderer — tracks FULL page scroll ── */
@@ -109,7 +109,7 @@ export default function Home() {
         className="fixed top-0 left-0 right-0 z-50"
         style={{
           transition: "background 0.4s, border-color 0.4s, backdrop-filter 0.4s",
-          background: scrolled ? "oklch(0.965 0.01 80 / 0.72)" : "transparent",
+          background: scrolled ? "oklch(0.965 0.01 80 / 0.55)" : "transparent",
           backdropFilter: scrolled ? "blur(13px)" : "none",
           borderBottom: scrolled ? "1px solid oklch(0.88 0.02 75)" : "1px solid transparent",
         }}
@@ -160,7 +160,7 @@ export default function Home() {
       </section>
 
       {/* ── Marquee ── */}
-      <div className="relative z-10 full-bleed overflow-hidden" style={{ background: "oklch(0.18 0.02 55 / 0.85)", padding: "13px 0" }}>
+      <div className="relative z-10 full-bleed overflow-hidden" style={{ background: "oklch(0.18 0.02 55 / 0.72)", padding: "13px 0" }}>
         <div style={{ display: "flex", width: "max-content", animation: "marquee 24s linear infinite" }}>
           {[...Array(3)].map((_, rep) => (
             <span key={rep} style={{ display: "flex", alignItems: "center", gap: 55, paddingRight: 55 }}>
@@ -176,7 +176,7 @@ export default function Home() {
       </div>
 
       {/* ── Results ── */}
-      <section id="work" className="relative z-10" style={{ background: "oklch(0.965 0.01 80 / 0.75)", paddingTop: "clamp(89px, 12vw, 233px)", paddingBottom: "clamp(89px, 12vw, 233px)" }}>
+      <section id="work" className="relative z-10" style={{ background: "oklch(0.965 0.01 80 / 0.55)", paddingTop: "clamp(89px, 12vw, 233px)", paddingBottom: "clamp(89px, 12vw, 233px)" }}>
         <div className="phi-grid">
           <div className="reveal" style={{ marginBottom: "clamp(55px, 7vw, 89px)", gridColumn: "content-start / content-end" }}>
             <span className="label label--amber" style={{ display: "block", marginBottom: 13 }}>Track Record</span>
@@ -203,7 +203,7 @@ export default function Home() {
       </section>
 
       {/* ── Services — φ split layout ── */}
-      <section id="services" className="relative z-10" style={{ background: "oklch(0.93 0.015 80 / 0.72)", paddingTop: "clamp(89px, 12vw, 233px)", paddingBottom: "clamp(89px, 12vw, 233px)" }}>
+      <section id="services" className="relative z-10" style={{ background: "oklch(0.93 0.015 80 / 0.50)", paddingTop: "clamp(89px, 12vw, 233px)", paddingBottom: "clamp(89px, 12vw, 233px)" }}>
         <div className="phi-grid">
           <div className="phi-major reveal" style={{ marginBottom: "clamp(55px, 7vw, 89px)" }}>
             <span className="label label--amber" style={{ display: "block", marginBottom: 13 }}>What We Do</span>
@@ -235,7 +235,7 @@ export default function Home() {
       </section>
 
       {/* ── Method — dark ground ── */}
-      <section id="method" className="relative z-10" style={{ background: "oklch(0.18 0.02 55 / 0.85)", color: "var(--cream)", paddingTop: "clamp(89px, 12vw, 233px)", paddingBottom: "clamp(89px, 12vw, 233px)" }}>
+      <section id="method" className="relative z-10" style={{ background: "oklch(0.18 0.02 55 / 0.72)", color: "var(--cream)", paddingTop: "clamp(89px, 12vw, 233px)", paddingBottom: "clamp(89px, 12vw, 233px)" }}>
         <div className="phi-grid">
           <div className="phi-major reveal" style={{ marginBottom: 13 }}>
             <span className="label" style={{ color: "var(--amber)", display: "block", marginBottom: 13 }}>Method</span>
@@ -267,7 +267,7 @@ export default function Home() {
       </section>
 
       {/* ── Growth — φ split ── */}
-      <section className="relative z-10" style={{ background: "oklch(0.965 0.01 80 / 0.75)", paddingTop: "clamp(89px, 12vw, 233px)", paddingBottom: "clamp(89px, 12vw, 233px)" }}>
+      <section className="relative z-10" style={{ background: "oklch(0.965 0.01 80 / 0.55)", paddingTop: "clamp(89px, 12vw, 233px)", paddingBottom: "clamp(89px, 12vw, 233px)" }}>
         <div className="phi-grid">
           <div className="phi-major reveal">
             <span className="label label--amber" style={{ display: "block", marginBottom: 13 }}>Growth</span>
@@ -300,7 +300,7 @@ export default function Home() {
       </section>
 
       {/* ── Contact ── */}
-      <section id="contact" className="relative z-10" style={{ background: "oklch(0.93 0.015 80 / 0.72)", paddingTop: "clamp(89px, 14vw, 233px)", paddingBottom: "clamp(89px, 14vw, 233px)" }}>
+      <section id="contact" className="relative z-10" style={{ background: "oklch(0.93 0.015 80 / 0.50)", paddingTop: "clamp(89px, 14vw, 233px)", paddingBottom: "clamp(89px, 14vw, 233px)" }}>
         <div className="phi-grid">
           <div className="phi-major reveal">
             <span className="label label--amber" style={{ display: "block", marginBottom: 13 }}>Contact</span>
@@ -321,7 +321,7 @@ export default function Home() {
       </section>
 
       {/* ── Footer ── */}
-      <footer className="relative z-10" style={{ background: "oklch(0.18 0.02 55 / 0.85)", color: "var(--cream)", padding: "clamp(34px, 5vw, 55px) 0" }}>
+      <footer className="relative z-10" style={{ background: "oklch(0.18 0.02 55 / 0.72)", color: "var(--cream)", padding: "clamp(34px, 5vw, 55px) 0" }}>
         <div className="phi-grid">
           <div style={{ gridColumn: "content-start / content-end", display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: 21 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 21 }}>

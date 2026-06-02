@@ -176,8 +176,8 @@ body {
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  /* Light wash — lets the video show through all sections */
-  background: oklch(0.965 0.01 80 / 0.62);
+  /* Thin wash — video dominates */
+  background: oklch(0.965 0.01 80 / 0.32);
 }
 
 /* ── Reveal ── */
