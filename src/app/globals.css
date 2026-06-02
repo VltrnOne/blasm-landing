@@ -176,13 +176,8 @@ body {
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  background: linear-gradient(
-    to bottom,
-    oklch(0.965 0.01 80 / 0.15) 0%,
-    oklch(0.965 0.01 80 / 0.55) 38.2%,
-    oklch(0.965 0.01 80 / 0.82) 61.8%,
-    oklch(0.965 0.01 80 / 1) 100%
-  );
+  /* Light wash — lets the video show through all sections */
+  background: oklch(0.965 0.01 80 / 0.62);
 }
 
 /* ── Reveal ── */
